@@ -32,7 +32,7 @@ Link：[CF2159E](https://codeforces.com/contest/2159/problem/E)
 先考虑每次询问 $[x^k]F_n(x)$ 要如何回答。
 
 考虑分块，记块长 $B$。
-- 对于 $0 \leq i \leq \frac{n}{B}$，使用 "少项式快速幂" 的技巧预处理出 $\mathcal{F}_i(x) = F_{iB}(x)$。
+- 对于 $0 \leq i \leq \frac{n}{B}$，使用 “少项式快速幂” 的技巧预处理出 $\mathcal{F}_i(x) = F_{iB}(x)$。
 - 对于 $0 \leq i < B$，暴力预处理出 $F_i(x)$。
 
 则 $F_n(x)$ 可以拆成 $\mathcal{F}_{\lfloor n / B \rfloor}(x) \times F_{n \bmod B}(x)$。
@@ -136,7 +136,7 @@ constexpr int qpow(int a, int b, int p) {
  * 
  *  模数：
  *  - 涉及到多项式乘法时：
- *      必须为 NTT 模数！否则请将 "多项式乘法" 替换为 "MTT 版本的多项式乘法"
+ *      必须为 NTT 模数！否则请将 “多项式乘法” 替换为 “MTT 版本的多项式乘法”
  *  - 仅涉及到 poly 的四则运算、求导、积分，以及暴力多项式 mul_bf, div_bf, inv_bf，pow_bf 时：
  *      只需模数为质数即可
  * 
