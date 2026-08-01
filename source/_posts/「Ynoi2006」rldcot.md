@@ -6,6 +6,7 @@ categories: Ynoi
 tags:
   - 启发式合并
   - 扫描线
+  - 支配对
 ---
 
 # Description
